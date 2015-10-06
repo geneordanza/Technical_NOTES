@@ -1,0 +1,62 @@
+
+    The core idea behind MVC is that you have clear separation in your code
+    between managing its data (model), the application logic (controller), and
+    presenting the data to the user (view).
+
+    The view gets data from the model to display to the user. When a user
+    interacts with the application by clicking or typing, the controller
+    responds by changing data in the model. Finally, the model notifies the view
+    that a change has occurred so that it can update what it displays.
+
+    In Angular applications, the view is the Document Object Model (DOM), the
+    controllers are JavaScript classes, and the model data is stored in object
+    properties.
+
+    What if we could just declare which parts of the UI map to which JavaScript
+    properties and have them sync automatically? This style of programming is
+    called data binding. We included it in Angular because it works great with
+    MVC to eliminate code when writing your view and model. Most of the work in
+    moving data from one to the other just happens automatically
+
+    We’ve already seen several new attributes in our templates that aren’t part
+    of the HTML specification. Examples include the double-curly notation for
+    data binding, ng- controller for specifying which controller oversees which
+    part of the view, and ng- model, which binds an input to part of the model.
+    We call these HTML extension directives.
+
+    Creating a Data Model
+    AngularJS supports the Model-View-Controller (MVC) pattern, which I describe
+    in Chapter 3. In short, following the MVC pattern requires you to break up
+    the application into three distinct areas: the data in the application (the
+    model), the logic that operates on that data (the controllers), and the
+    logic that displays the data (the views)
+
+    ■ Note  AngularJs compilation isn’t like the compilation you might have
+    encountered in C# or Java projects, where the compiler has to process the
+    source code in order to generate output that the runtime can execute. it
+    would be more accurate to say that the angularJs library evaluates the HTML
+    elements when the browser has loaded the content and uses standard DoM api
+    and Javascript features to add and remove elements, sets up event handlers,
+    and so on. there is no explicit compilation step in angularJs development;
+    just modify your htMl and Javascript files and load them into the browser
+
+    Creating a Controller
+    =====================
+    The controller defines the business logic required to support a view,
+    although the term business logic isn’t helpful. The best way of describing a
+    controller is to explain what kinds of logic it doesn’t contain—and what’s
+    left goes into the controller.
+
+    Logic that deals with storing or retrieving data is part of the model. Logic
+    that deals with formatting the data to display to the user is part of the
+    view. The controller sits between the model and the view and connects them.
+    The controller responds to user interaction, updating the data in the model
+    and providing the view with the data that it requires.
+
+    ----
+
+    In an AngularJS app, variable names that start with $ represent built-in
+    features that AngularJS provides. When you see the $ sign, it usually refers
+    to a built-in service, which is a self-contained component that provides
+    features to multiple controllers, but $scope is special and is used to
+    expose data and functionality to views.
